@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "personal_information": {
+      "type": "object",
+      "properties": {
+        "full_name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" }
+      },
+      "required": ["full_name", "email", "phone", "location"]
+    },
+    "summary": { "type": "string" },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "work_experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "job_title": { "type": "string" },
+          "company": { "type": "string" },
+          "location": { "type": "string" },
+          "start_date": { "type": "string", "format": "date" },
+          "end_date": { "type": ["string", "null"], "format": "date" },
+          "responsibilities": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["job_title", "company", "location", "start_date", "responsibilities"]
+      }
+    },
+    "education": {
+      "type": "object",
+      "properties": {
+        "degree": { "type": "string" },
+        "university": { "type": "string" },
+        "graduation_date": { "type": "string", "format": "date" },
+        "honors": { "type": "string" }
+      },
+      "required": ["degree", "university", "graduation_date"]
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "date_earned": { "type": "string", "format": "date" }
+        },
+        "required": ["name", "date_earned"]
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "project_name": { "type": "string" },
+          "description": { "type": "string" },
+          "technologies_used": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["project_name", "description", "technologies_used"]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": { "type": "string" },
+          "fluency_level": { "type": "string" }
+        },
+        "required": ["language", "fluency_level"]
+      }
+    }
+  },
+  "required": ["personal_information", "summary", "skills", "work_experience", "education", "certifications", "projects", "languages"]
+}

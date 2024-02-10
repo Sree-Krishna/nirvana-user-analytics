@@ -14,7 +14,7 @@
 
 ## Overview
 
-The Nirvana User Analytics project is a comprehensive data analytics engine designed to extract insights from user data stored in JSON format. It utilizes statistical, NLP-based, and AI-based filters and analytics to generate detailed reports. The primary focus is on analyzing information related to universities, students, skills, work experience, education, certifications, projects, and languages.
+The Nirvana User Analytics project is a comprehensive data analytics engine designed to extract insights from Nirvana user data stored in JSON format. It utilizes statistical, NLP-based, and AI-based filters and analytics to generate detailed reports. The primary focus is on analyzing information related to universities, students, skills, work experience, education, certifications, projects, and languages of the batch.
 
 ## Project Structure
 

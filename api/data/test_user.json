@@ -1,0 +1,73 @@
+[{
+  "summary": "I am a software engineer with a strong background in computer software engineering.",
+  "skills": [
+    "C",
+    "C++",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "React JS",
+    "React Native",
+    "Node JS",
+    "Express JS",
+    "Next JS",
+    "FastAPI",
+    "StreamLit",
+    "Numpy",
+    "Pandas",
+    "Scikit-Learn",
+    "MySQL",
+    "PostgreSQL",
+    "Elasticsearch",
+    "Apache Spark",
+    "Redis",
+    "Pinecone",
+    "Milvus",
+    "CNNs",
+    "RNNs",
+    "LSTM",
+    "BERT",
+    "GANs",
+    "Autoencoders",
+    "Transformers",
+    "Keras",
+    "Tensorflow",
+    "PyTorch",
+    "Regression",
+    "Classification",
+    "Clustering",
+    "PCA",
+    "Feature extraction",
+    "Grid Search",
+    "Bayesian Optimization",
+    "Kubernetes",
+    "Docker",
+    "Apache Airflow",
+    "Github CI/CD",
+    "AWS - EC2",
+    "S3",
+    "Sagemaker",
+    "Lambda"
+  ],
+  "education": [
+    {
+      "degree": "MS - Computer Software Engineering",
+      "graduation_date": {
+        "month": 5,
+        "year": 2024
+      },
+      "university": "Northeastern University",
+      "honors": null
+    },
+    {
+      "degree": "Bachelors of Technology - Information Technology",
+      "graduation_date": {
+        "month": 5,
+        "year": 2022
+      },
+      "university": "University of Mumbai",
+      "honors": null
+    }
+  ]
+}]

@@ -1,64 +1,120 @@
 import streamlit as st
 from handle_requests import *
-from utils import *
+from components import university, skills, experience, education, project, certification
+
+SECTIONS = {"UNIVERSITY": "University & Student Statistics",
+            "SKILLS": "Skills Analysis",
+            "EXPERIENCE": "Work Experience Insights",
+            "EDUCATION": "Education Trends", 
+            "CERTIFICATION": "Certifications Analytics",
+            "PROJECT": "Project Analysis",
+            "LANGUAGE": "Language Proficiency",
+            "SUMMARY": "Sentiment Analysis on Summaries"}
+            # 'TEMPORAL": "Temporal Analysis",
+            # 'UNIV": "Collaboration Patterns",
+            # 'UNIV": "Geospatial Analytics"}
 
 def create_sidebar():
-  """Creates the sidebar for navigation."""
-  sections = ["University & Student Statistics",
-              "Skills Analysis",
-              "Work Experience Insights",
-              "Education Trends",
-              "Certifications Analytics",
-              "Project Analysis",
-              "Language Proficiency",
-              "Sentiment Analysis on Summaries",
-              "Temporal Analysis",
-              "Collaboration Patterns",
-              "Geospatial Analytics"]
-  selected_analysis = st.sidebar.selectbox("Choose Analysis", sections)
+  """Creates the sidebar for navigation."""  
+  selected_analysis = st.sidebar.selectbox("Choose Analysis", SECTIONS.values())
   return selected_analysis
 
-def display_university_student_analysis():
-    """Displays visualizations and data for university and student analysis."""
+def university_analysis():
     try:
         # Fetch data from the backend
         with st.spinner("Fetching data..."):
         # Fetch data from the backend
-            data = get_university_student_analysis()
-
-        # Update placeholder with actual content
-        st.subheader("Number of Students per University")
-        display_chart(data)  # Call utility function for chart
+            data = get_university_data()
+            university.main(data)
 
     except Exception as e:
         st.subheader("Loading Failed!")
         st.error(f"Error fetching data: {e}")
   
+def skills_analysis():
+    try:
+        # Fetch data from the backend
+        with st.spinner("Fetching data..."):
+        # Fetch data from the backend
+            data = get_skills_data()
+            skills.main(data)
 
-  # Add more visualizations or data tables here
+    except Exception as e:
+        st.subheader("Loading Failed!")
+        st.error(f"Error fetching data: {e}")
 
-def display_skills_analysis():
-  """Displays visualizations and data for skills analysis."""
-  st.subheader("Most Frequent Skills")
+def experience_analysis():
+    try:
+        # Fetch data from the backend
+        with st.spinner("Fetching data..."):
+        # Fetch data from the backend
+            data = get_experience_data()
+            experience.main(data)
 
-  # Add more visualizations or data tables here
+    except Exception as e:
+        st.subheader("Loading Failed!")
+        st.error(f"Error fetching data: {e}")
 
-def display_work_experience_analysis():
-  """Displays visualizations and data for work experience analysis."""
-  st.subheader("Average Work Experience Duration")
+def education_analysis():
+    try:
+        # Fetch data from the backend
+        with st.spinner("Fetching data..."):
+        # Fetch data from the backend
+            data = get_education_data()
+            education.main(data)
 
-  # Add more visualizations or data tables here
+    except Exception as e:
+        st.subheader("Loading Failed!")
+        st.error(f"Error fetching data: {e}")
 
+def certification_analysis():
+    try:
+        # Fetch data from the backend
+        with st.spinner("Fetching data..."):
+        # Fetch data from the backend
+            data = get_certification_data()
+            certification.main(data)
+
+    except Exception as e:
+        st.subheader("Loading Failed!")
+        st.error(f"Error fetching data: {e}")
+
+def project_analysis():
+    try:
+        # Fetch data from the backend
+        with st.spinner("Fetching data..."):
+        # Fetch data from the backend
+            data = get_project_data()
+            project.main(data)
+
+    except Exception as e:
+        st.subheader("Loading Failed!")
+        st.error(f"Error fetching data: {e}")
 
 def main():
+    # sidebar for navigation between various analysis
     selected_analysis = create_sidebar()
     st.title("Nirvana Analytics Engine")
-    if selected_analysis == "University & Student Statistics":
-        display_university_student_analysis()
-    elif selected_analysis == "Skills Analysis":
-        display_skills_analysis()
-    else:
-        display_work_experience_analysis()
+
+    if selected_analysis == SECTIONS['UNIVERSITY']:
+        university_analysis()
+    elif selected_analysis == SECTIONS['SKILLS']:
+        skills_analysis()
+    elif selected_analysis == SECTIONS['EXPERIENCE']:
+        experience_analysis()
+    elif selected_analysis == SECTIONS['EDUCATION']:
+        education_analysis()
+    elif selected_analysis == SECTIONS['CERTIFICATION']:
+        certification_analysis()
+    elif selected_analysis == SECTIONS['PROJECT']:
+        project_analysis()
+    elif selected_analysis == SECTIONS['LANGUAGE']:
+        # language_analysis()
+        pass
+    elif selected_analysis == SECTIONS['SUMMARY']:
+        # summary_analysis()
+        pass
+
 
 if __name__ == "__main__":
   main()

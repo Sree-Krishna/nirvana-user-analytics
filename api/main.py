@@ -2,10 +2,10 @@ from fastapi import FastAPI
 from uvicorn import run  # For running the application
 
 # Importing routers
-from endpoints import university_endpoint  
+from endpoints import router  
 app = FastAPI()
 
-app.include_router(university_endpoint.router)
+app.include_router(router)
 
 # Optional configuration (e.g., documentation, middleware)
 

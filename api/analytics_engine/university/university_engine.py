@@ -22,3 +22,9 @@ class UniversityEngine(DataAnalyzer):
     universities = self.get_user_universities()
     university_counts = Counter(universities)
     return university_counts
+  
+  def get_all(self):
+    results = {}
+    results['university_count'] = self.count_unique_universities()
+    results['students_per_university'] = self.count_students_per_university()
+    return results

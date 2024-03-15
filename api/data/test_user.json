@@ -69,5 +69,275 @@
       "university": "University of Mumbai",
       "honors": null
     }
+  ],
+  "projects": [
+    {
+      "project_name": "SamvadAI",
+      "description": "Developed an AI-powered ATS system utilizing transformer LLMs and NLP engineering to revolutionize candidate search, empowering recruiters with effortless skill-based queries and achieving unmatched parsing accuracy for wise hiring decisions.",
+      "technologies_used": [
+        "FastAPI",
+        "Docker",
+        "Streamlit",
+        "Milvus"
+      ]
+    },
+    {
+      "project_name": "ShopWizard",
+      "description": "Engineered an innovative ML model leveraging VGG-16 and BERT algorithms to develop text embeddings and map image similarities between Shopify products across multiple businesses imitating cross-selling.",
+      "technologies_used": []
+    },
+    {
+      "project_name": "ScrapingNinja",
+      "description": "Developed and implemented advanced web scraping strategies for Zepto, Pharmeasy, and Coursera, leveraging cutting-edge parser technologies to overcome captcha, rate limits, and bot detectors for enhanced data extraction.",
+      "technologies_used": []
+    },
+    {
+      "project_name": "AnimeCraft",
+      "description": "crafted amime",
+      "technologies_used": []
+    }
+  ],
+  "languages": [],
+  "personal_information": {
+    "phone": "+1 857(334)3947"
+  },
+  "top_5_skills": [
+    "React JS",
+    "Python",
+    "Machine Learning",
+    "Kubernetes",
+    "Docker"
+  ],
+  "certifications": [],
+  "interests": [],
+  "work_experience": [
+    {
+      "end_date": {
+        "month": 8,
+        "year": 2022
+      },
+      "responsibilities": [
+        "Optimized Vue.js frontend app through efficient component utilization and advanced state management techniques, achieving 25% faster page load time, 15% enhanced user engagement, and a significant 30% reduction in bundle size.",
+        "Designed robust MySQL schema and efficient FastAPI backend APIs, ensuring data integrity, scalability, and high-performance retrieval. Implemented advanced indexing and query optimization, achieving 40% faster queries.",
+        "Implemented unit and end-to-end tests using Jest for 85% coverage, ensuring reliable releases. Conducted A/B tests, resulting in 10% user acquisition increase and 5% churn decrease."
+      ],
+      "is_internship": false,
+      "company": "BattleBrains.xyz (Seed Funded by Polygon Matic)",
+      "location": {
+        "country_code": "SG"
+      },
+      "job_title": "Co-founder and Lead Software Engineer",
+      "start_date": {
+        "month": 4,
+        "year": 2022
+      }
+    },
+    {
+      "end_date": {
+        "month": 4,
+        "year": 2022
+      },
+      "responsibilities": [
+        "Designed and organized analytics endpoints for Web3 UI elements using Amplitude, capturing critical metrics on user engagement, retention, and conversion. Implemented data-driven strategies resulting in a 30% increase in user engagement and a 25% improvement in conversion rates. Leveraged FastAPI for API development and used Amazon S3 and Apache Kafka, to ensure efficient data analysis and retrieval.",
+        "Leveraged ML algorithms to conduct a comprehensive analysis of heatmaps and user behavior data, using Amazon Redshift to implement a scalable data storage solution. Streamlined the CI/CD pipeline using Apache Airflow, resulting in improved UX decisions that led to a 35% reduction in user drop-off rate within 3 months."
+      ],
+      "is_internship": false,
+      "company": "Spacekayak (Series-A by LightSpeed Ventures)",
+      "location": {
+        "country_code": "IN"
+      },
+      "job_title": "Associate Data Engineer",
+      "start_date": {
+        "month": 12,
+        "year": 2021
+      }
+    },
+    {
+      "end_date": {
+        "month": 7,
+        "year": 2021
+      },
+      "responsibilities": [
+        "Led the development of the AI infrastructure, using CNNs and GANs, to convert garment sketches into highly accurate 3D models. Accelerated rendering through C++, CUDA, and Docker, resulting in a 40% reduction in processing time.",
+        "Pioneered an innovative fashion Metaverse project with Blender and OpenGL, enabling immersive virtual shopping experiences. Achieved a 30% increase in user engagement and 95% satisfaction metrics.",
+        "Implemented CI/CD pipelines using Apache Airflow for continuous deployment on Shopify. Perfected the MLOps framework streamlining the development processes and reducing system downtime by 20% using Kubernetes."
+      ],
+      "is_internship": false,
+      "company": "Levyne (The VR Shopping Experience)",
+      "location": {
+        "country_code": "IN"
+      },
+      "job_title": "Co-founder and Systems Design Engineer",
+      "start_date": {
+        "month": 9,
+        "year": 2019
+      }
+    }
+  ]
+},
+{
+  "summary": "I am a software engineer with a strong background in computer software engineering.",
+  "skills": [
+    "C",
+    "C++",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "React JS",
+    "React Native",
+    "Node JS",
+    "Express JS",
+    "Next JS",
+    "FastAPI",
+    "StreamLit",
+    "Numpy",
+    "Pandas",
+    "Scikit-Learn",
+    "MySQL",
+    "PostgreSQL",
+    "Elasticsearch",
+    "Apache Spark",
+    "Redis",
+    "Pinecone",
+    "Regression",
+    "Classification",
+    "Clustering",
+    "PCA",
+    "Feature extraction",
+    "Grid Search",
+    "Bayesian Optimization",
+    "Kubernetes",
+    "Docker",
+    "Apache Airflow",
+    "Github CI/CD",
+    "AWS - EC2",
+    "S3",
+    "Sagemaker",
+    "Lambda"
+  ],
+  "education": [
+    {
+      "degree": "MS - Computer Software Engineering",
+      "graduation_date": {
+        "month": 5,
+        "year": 2024
+      },
+      "university": "Northeastern University",
+      "honors": null
+    },
+    {
+      "degree": "Bachelors of Technology - Information Technology",
+      "graduation_date": {
+        "month": 5,
+        "year": 2022
+      },
+      "university": "University of Mumbai",
+      "honors": null
+    }
+  ],
+  "projects": [
+    {
+      "project_name": "SamvadAI",
+      "description": "Developed an AI-powered ATS system utilizing transformer LLMs and NLP engineering to revolutionize candidate search, empowering recruiters with effortless skill-based queries and achieving unmatched parsing accuracy for wise hiring decisions.",
+      "technologies_used": [
+        "FastAPI",
+        "Docker",
+        "Streamlit",
+        "Milvus"
+      ]
+    },
+    {
+      "project_name": "ShopWizard",
+      "description": "Engineered an innovative ML model leveraging VGG-16 and BERT algorithms to develop text embeddings and map image similarities between Shopify products across multiple businesses imitating cross-selling.",
+      "technologies_used": []
+    },
+    {
+      "project_name": "ScrapingNinja",
+      "description": "Developed and implemented advanced web scraping strategies for Zepto, Pharmeasy, and Coursera, leveraging cutting-edge parser technologies to overcome captcha, rate limits, and bot detectors for enhanced data extraction.",
+      "technologies_used": []
+    },
+    {
+      "project_name": "AnimeCraft",
+      "description": "Curated and preprocessed a dataset of 100k+ anime images through effective ETL techniques. Applied GANs, to train a sophisticated model capable of generating anime-style images and optimized style transfer by fine-tuning using various performance metrics, including Inception Distance and Structural Similarity Index.",
+      "technologies_used": []
+    }
+  ],
+  "languages": [],
+  "personal_information": {
+    "phone": "+1 857(334)3947"
+  },
+  "top_5_skills": [
+    "React JS",
+    "Python",
+    "Machine Learning",
+    "Kubernetes",
+    "Docker"
+  ],
+  "certifications": [],
+  "interests": [],
+  "work_experience": [
+    {
+      "end_date": {
+        "month": 8,
+        "year": 2022
+      },
+      "responsibilities": [
+        "Optimized Vue.js frontend app through efficient component utilization and advanced state management techniques, achieving 25% faster page load time, 15% enhanced user engagement, and a significant 30% reduction in bundle size.",
+        "Designed robust MySQL schema and efficient FastAPI backend APIs, ensuring data integrity, scalability, and high-performance retrieval. Implemented advanced indexing and query optimization, achieving 40% faster queries.",
+        "Implemented unit and end-to-end tests using Jest for 85% coverage, ensuring reliable releases. Conducted A/B tests, resulting in 10% user acquisition increase and 5% churn decrease."
+      ],
+      "is_internship": false,
+      "company": "BattleBrains.xyz (Seed Funded by Polygon Matic)",
+      "location": {
+        "country_code": "SG"
+      },
+      "job_title": "Co-founder and Lead Software Engineer",
+      "start_date": {
+        "month": 4,
+        "year": 2022
+      }
+    },
+    {
+      "end_date": {
+        "month": 4,
+        "year": 2022
+      },
+      "responsibilities": [
+        "Designed and organized analytics endpoints for Web3 UI elements using Amplitude, capturing critical metrics on user engagement, retention, and conversion. Implemented data-driven strategies resulting in a 30% increase in user engagement and a 25% improvement in conversion rates. Leveraged FastAPI for API development and used Amazon S3 and Apache Kafka, to ensure efficient data analysis and retrieval.",
+        "Leveraged ML algorithms to conduct a comprehensive analysis of heatmaps and user behavior data, using Amazon Redshift to implement a scalable data storage solution. Streamlined the CI/CD pipeline using Apache Airflow, resulting in improved UX decisions that led to a 35% reduction in user drop-off rate within 3 months."
+      ],
+      "is_internship": false,
+      "company": "Spacekayak (Series-A by LightSpeed Ventures)",
+      "location": {
+        "country_code": "IN"
+      },
+      "job_title": "Associate Data Engineer",
+      "start_date": {
+        "month": 12,
+        "year": 2021
+      }
+    },
+    {
+      "end_date": {
+        "month": 7,
+        "year": 2021
+      },
+      "responsibilities": [
+        "Led the development of the AI infrastructure, using CNNs and GANs, to convert garment sketches into highly accurate 3D models. Accelerated rendering through C++, CUDA, and Docker, resulting in a 40% reduction in processing time.",
+        "Pioneered an innovative fashion Metaverse project with Blender and OpenGL, enabling immersive virtual shopping experiences. Achieved a 30% increase in user engagement and 95% satisfaction metrics.",
+        "Implemented CI/CD pipelines using Apache Airflow for continuous deployment on Shopify. Perfected the MLOps framework streamlining the development processes and reducing system downtime by 20% using Kubernetes."
+      ],
+      "is_internship": false,
+      "company": "Levyne (The VR Shopping Experience)",
+      "location": {
+        "country_code": "IN"
+      },
+      "job_title": "Co-founder and Systems Design Engineer",
+      "start_date": {
+        "month": 9,
+        "year": 2019
+      }
+    }
   ]
 }]

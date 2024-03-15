@@ -6,9 +6,9 @@ class SkillsEngine(DataAnalyzer):
 
   def get_all_skills(self):
     """Extracts a list of all unique skills mentioned by users."""
-    skills = set()
+    skills = []
     for user in self.data:
-      skills.update(user["skills"])
+      skills += user["skills"]
     return list(skills)
 
   def find_most_frequent_skills(self, n=10):
@@ -23,7 +23,7 @@ class SkillsEngine(DataAnalyzer):
 
   def get_all(self):
     results = {}
-    results['unique_skills'] = self.get_all_skills()
+    results['unique_skills'] = set(self.get_all_skills())
     results['skill_distribution'] = self.find_most_frequent_skills()
     return results
     

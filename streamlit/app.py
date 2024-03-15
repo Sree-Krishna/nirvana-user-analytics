@@ -2,6 +2,7 @@ import streamlit as st
 from handle_requests import *
 from components import university, skills, experience, education, project, certification
 
+
 SECTIONS = {"UNIVERSITY": "University & Student Statistics",
             "SKILLS": "Skills Analysis",
             "EXPERIENCE": "Work Experience Insights",
@@ -93,8 +94,8 @@ def project_analysis():
 
 def main():
     # sidebar for navigation between various analysis
-    selected_analysis = create_sidebar()
     st.title("Nirvana Analytics Engine")
+    selected_analysis = create_sidebar()
 
     if selected_analysis == SECTIONS['UNIVERSITY']:
         university_analysis()

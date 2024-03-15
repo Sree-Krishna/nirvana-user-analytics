@@ -18,9 +18,11 @@ class UniversityEngine(DataAnalyzer):
 
   def count_students_per_university(self):
     """Calculates the number of students associated with each university."""
-    from collections import Counter
-    universities = self.get_user_universities()
-    university_counts = Counter(universities)
+    university_counts = {}
+    for univ in self.get_user_universities():
+      if univ not in university_counts:
+        university_counts[univ] = 0
+      university_counts[univ] += 1
     return university_counts
   
   def get_all(self):

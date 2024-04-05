@@ -37,7 +37,7 @@ def display_skills_horizontaly(data):
     # fig.update_traces(marker_line_width=1.5)
     # st.write(fig)
     data = pd.melt(df.reset_index(), id_vars=["index"])
-
+ 
     # Horizontal stacked bar chart
     chart = (
         alt.Chart(data)

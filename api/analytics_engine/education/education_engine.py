@@ -4,22 +4,49 @@ class EducationEngine(DataAnalyzer):
   def __init__(self, data):
     super().__init__(data)
 
-  def get_all_skills(self):
-    """Extracts a list of all unique skills mentioned by users."""
-    skills = set()
-    for user in self.data:
-      skills.update(user["skills"])
-    return list(skills)
+  def analyze_education_trends(self):
+    """
+    Analyzes education trends from the provided JSON data.
 
-  def find_most_frequent_skills(self, n=10):
-    """Finds the n most frequent skills across all users."""
-    from collections import Counter
-    all_skills = self.get_all_skills()
-    skill_counts = Counter(all_skills)
-    return skill_counts.most_common(n)
+    Args:
+        data: A list of dictionaries containing user information.
+
+    Prints insights about:
+        - Distribution of degrees obtained
+        - Graduation date trends (year-wise)
+        - Honors received by users
+    """
+    degree_counts = {}
+    graduation_years = {}
+    honors_received = set()
+
+    for profile in self.data:
+      for education in profile["education"]:
+        degree = education["degree"]
+        graduation_year = education["graduation_date"]["year"]
+        honors = education.get("honors")  # Check if honors exist
+
+        # Track degree occurrences
+        if degree in degree_counts:
+          degree_counts[degree] += 1
+        else:
+          degree_counts[degree] = 1
+
+        # Track graduation years
+        if graduation_year in graduation_years:
+          graduation_years[graduation_year] += 1
+        else:
+          graduation_years[graduation_year] = 1
+
+        # Track honors received (if any)
+        if honors:
+          honors_received.add(honors)
+    results = {}
+    results['degree_counts'] = degree_counts
+    results['graduation_years'] = graduation_years
+    results['honors_received'] = honors_received
+    return results
 
   def get_all(self):
-    results = {}
-    results['university_count'] = self.get_all_skills()
-    results['students_per_university'] = self.find_most_frequent_skills()
+    results = self.analyze_education_trends()
     return results

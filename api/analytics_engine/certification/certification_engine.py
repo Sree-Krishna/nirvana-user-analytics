@@ -4,22 +4,61 @@ class CertificationEngine(DataAnalyzer):
   def __init__(self, data):
     super().__init__(data)
 
-  def get_all_skills(self):
-    """Extracts a list of all unique skills mentioned by users."""
-    skills = set()
-    for user in self.data:
-      skills.update(user["skills"])
-    return list(skills)
+  def analyze_certifications(self):
+    """
+    Analyzes certification trends from the provided JSON data.
 
-  def find_most_frequent_skills(self, n=10):
-    """Finds the n most frequent skills across all users."""
-    from collections import Counter
-    all_skills = self.get_all_skills()
-    skill_counts = Counter(all_skills)
-    return skill_counts.most_common(n)
+    Args:
+        data: A list of dictionaries containing user information.
+
+    Prints insights about:
+        - Most frequently earned certifications
+        - Distribution of certification acquisition over time (year-wise)
+    """
+    cert_counts = {}
+    acquisition_years = {}
+
+    # Check if certifications exist in user data
+    has_certs = False
+    for profile in self.data:
+      if "certifications" in profile:
+        has_certs = True
+        break
+
+    if not has_certs:
+      print("No certification information provided.")
+      return
+
+    for profile in self.data:
+      if "certifications" not in profile:
+        continue
+      for cert in profile["certifications"]:
+        # Track certification occurrences
+        if cert in cert_counts:
+          cert_counts[cert] += 1
+        else:
+          cert_counts[cert] = 1
+
+        # Extract acquisition year (assuming 'end_date' exists for certifications)
+        acquisition_year = profile["certifications"][0]["end_date"]["year"]  # Assuming first cert for illustration
+        if acquisition_year in acquisition_years:
+          acquisition_years[acquisition_year] += 1
+        else:
+          acquisition_years[acquisition_year] = 1
+
+    # Print insights (if certifications exist)
+    if has_certs:
+      # Find most frequent certifications (can be modified to return top N)
+      most_frequent_certs = [cert for cert, count in cert_counts.items() if count == max(cert_counts.values())]
+
+      print("\nMost Frequently Earned Certifications:")
+      print(", ".join(most_frequent_certs))
+
+      print("\nDistribution of Certification Acquisition Over Time:")
+      for year, count in acquisition_years.items():
+        print(f"- {year}: {count}")
+      return  {'most_frequent': most_frequent_certs, 'acquisition_years': acquisition_years}
 
   def get_all(self):
-    results = {}
-    results['university_count'] = self.get_all_skills()
-    results['students_per_university'] = self.find_most_frequent_skills()
+    results = self.analyze_certifications()
     return results

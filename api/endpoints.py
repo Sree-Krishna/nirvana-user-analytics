@@ -6,6 +6,7 @@ from analytics_engine.experience.experience_engine import ExperienceEngine
 from analytics_engine.certification.certification_engine import CertificationEngine
 from analytics_engine.project.project_engine import ProjectEngine
 from analytics_engine.language.language_engine import LanguageEngine
+from analytics_engine.summary.summary_engine import SummaryEngine
 from model import load_data
 
 router = APIRouter()
@@ -19,6 +20,7 @@ education_engine = EducationEngine(data)
 experience_engine = ExperienceEngine(data)
 certification_engine = CertificationEngine(data)
 language_engine = LanguageEngine(data)
+summary_engine = SummaryEngine(data)
 
 
 @router.get("/universities")
@@ -55,3 +57,8 @@ async  def get_certificaiton_analytics():
 async  def get_language_analytics():
   language_engine_data = language_engine.get_all()
   return language_engine_data
+
+@router.get("/summary")
+async  def get_summary_analytics():
+  summary_engine_data = summary_engine.get_all()
+  return summary_engine_data
